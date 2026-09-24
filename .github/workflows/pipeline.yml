@@ -1,4 +1,4 @@
-name: evals
+name: pipeline
 
 on:
   pull_request:
