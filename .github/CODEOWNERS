@@ -1,0 +1,49 @@
+# CODEOWNERS — quem revisa cada parte do sistema multiagente.
+#
+# Regra do GitHub: a ÚLTIMA linha que casar com o arquivo vence.
+# Por isso o padrão geral (*) vem primeiro e as regras específicas depois.
+#
+# Os três integrantes estão em todas as linhas: quem abre o PR não pode
+# aprovar o próprio PR, então um dos outros dois precisa revisar.
+# Cada pessoa listada precisa ter permissão de escrita (write) no repositório,
+# senão o GitHub ignora a linha.
+
+# --------------------------------------------------------------------------
+# Padrão: qualquer arquivo sem regra específica
+# --------------------------------------------------------------------------
+*                       @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Núcleo do agente — loop, ferramentas, integração com o modelo
+# --------------------------------------------------------------------------
+/agent.py               @PedroGhiraldelli @swatusausbr @ragFurlan
+/requirements.txt       @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Interface web (Streamlit)
+# --------------------------------------------------------------------------
+/app.py                 @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Prompts de sistema — cada agente tem um responsável
+# Mudar prompt muda comportamento: é código, não documentação.
+# --------------------------------------------------------------------------
+/agent.md               @PedroGhiraldelli @swatusausbr @ragFurlan
+/agent-ada.md           @PedroGhiraldelli @swatusausbr @ragFurlan
+/agent-lint.md          @PedroGhiraldelli @swatusausbr @ragFurlan
+/agent-val.md           @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Memória persistente (entra no prompt em toda execução)
+# --------------------------------------------------------------------------
+/memory.md              @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Evals e testes
+# --------------------------------------------------------------------------
+/evals/                 @PedroGhiraldelli @swatusausbr @ragFurlan
+
+# --------------------------------------------------------------------------
+# Governança: quem muda as regras de revisão e o CI
+# --------------------------------------------------------------------------
+/.github/               @PedroGhiraldelli @swatusausbr @ragFurlan
